@@ -1,0 +1,85 @@
+/* Fonts */
+/* Font do menu */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+/* Geral */
+.line-none-pading > div{
+  padding: 0;
+}
+/* Editando o menu */
+
+nav.navbar{
+  padding: 20px 0;
+}
+
+nav.navbar a.navbar-brand{
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833;
+}
+nav.navbar .nav-link{
+  /* text-transform: uppercase !important; */
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833 !important;
+}
+
+div#header{
+  height: 80vh;
+}
+
+div#header div.carousel-item{
+  
+}
+
+div#header div.carousel-img-1{
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+  border-radius: 0 0 150px 0;
+}
+
+div#header div.carousel-img-2{
+  background: #DADADA;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 110vh;
+  border-radius: 0 0 150px 0;
+
+}
+
+div#header div.carousel-img-3{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+  border-radius: 0 0 150px 0;
+}
+
+div#header div.text-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 50px;
+}
+
+div#header div.text-header h3{
+  font-size: bold;
+  font-size: 3em;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 5px;
+}
+
+div#header div.text-header p{
+  margin-top: 0;
+  font-size: 1.3em;
+  padding: 0 3px;
+}
