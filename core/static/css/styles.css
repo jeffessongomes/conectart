@@ -179,6 +179,7 @@ div#sobre-nos h5{
   font-size: 0.9em;
   color: #b3b3b3;
   text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 1.2px;
 }
 
@@ -232,3 +233,49 @@ div.sobre-video{
   align-items: center;
   height: 100%;
 }
+
+
+/* Clientes */
+div#clients{
+  margin-bottom: 300px;
+}
+
+
+div#clients .client-info h5{
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+
+div#clients .client-info h2{
+  text-align: center;
+  color: #1C2833;
+  margin-top: 10px;
+}
+
+div#clients .client-comment{
+  height: 170px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px #b3b3b3;
+  padding: 25px 0;
+}
+
+div#clients .client-comment h3{
+  font-size: 1.4em;
+  color: #1C2833;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+div#clients .client-comment p{
+  padding: 0 200px 0px 200px;
+}
+
+div#clients .checked{
+  color: orange;
+}
+
