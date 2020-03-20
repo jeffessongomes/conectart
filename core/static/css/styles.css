@@ -119,8 +119,8 @@ div#header div.text-header p{
 
 /* editing article */
 div#article{
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 300px;
+  margin-bottom: 300px;
 }
 
 div#article div.learn-info h5{
@@ -167,4 +167,68 @@ div#article .card-learn h5{
 
 div#article .card-learn p{
   color: #b3b3b3;
+}
+
+/* editing about */
+
+div#sobre-nos{
+  margin-bottom: 300px;
+}
+
+div#sobre-nos h5{
+  font-size: 0.9em;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+div#sobre-nos h2{
+  padding: 10px 0;
+  color: #1C2833
+}
+
+div#sobre-nos p{
+  color: gray;
+}
+
+div#sobre-nos ul{
+  list-style: none;
+  color: gray;
+  padding: 0;
+}
+
+div#sobre-nos div.list-ul-about{
+  display: flex;
+}
+
+div#sobre-nos li{
+  padding: 5px 30px 5px 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+div#sobre-nos .container-btn-cto{
+  margin-top: 30px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+div#sobre-nos .btn-cto{
+  width: 37%;
+}
+
+div#sobre-nos .btn-cto:hover{
+  width: 34%;
+}
+
+
+div#sobre-nos div.about-info{
+  padding: 0 25px;
+}
+
+div.sobre-video{
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
