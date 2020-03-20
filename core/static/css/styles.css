@@ -4,6 +4,10 @@
 
 
 /* Geral */
+*{
+  scroll-behavior: smooth;
+}
+
 .line-none-pading > div{
   padding: 0;
 }
@@ -279,3 +283,85 @@ div#clients .checked{
   color: orange;
 }
 
+
+/* photos gallery */
+
+div#gallery{
+  margin-bottom: 200px;
+}
+
+div.gallery-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #b3b3b3;
+}
+
+div.gallery-info h2{
+  text-align: center;
+  color: #1C2833;
+  margin-bottom: 50px;
+}
+
+
+/* contato */
+
+div#contact{
+  padding: 25px 0px;
+}
+
+.bg-contact{
+  position: relative;
+  top: 120px;
+  position: relative;
+  background: #FFF;
+  padding: 25px 0;
+  z-index: 31;
+}
+
+div.contact-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+div.contact-info h2{
+  text-align: center;
+}
+
+div#contact form{
+  margin-top: 25px;
+  padding: 0 30px;
+}
+
+div#contact form input{
+  text-align: center;
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+
+}
+div#contact form textarea{
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+}
+
+div#contact .container-btn-cto {
+  justify-content: start;
+}
+
+div#contact .btn-cto{
+  border-radius: 300px;
+  width: 17%;
+  padding: 13px 0;
+}
+
+div#rodape{
+  z-index: 30;
+  height: 70vh;
+  background: #2C3E50;
+}
