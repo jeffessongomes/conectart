@@ -7,6 +7,31 @@
 .line-none-pading > div{
   padding: 0;
 }
+
+.container-btn-cto{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cto{
+  background: rgb(91,114,237);
+  background: linear-gradient(54deg, rgba(91,114,237,1) 25%, rgba(44,182,213,1) 75%);
+  width: 34%;
+  color: #FFF;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.btn-cto:hover{
+  width: 37%;
+  
+  text-decoration: none;
+  color: #FFF;
+}
+
 /* Editando o menu */
 
 nav.navbar{
@@ -31,8 +56,13 @@ div#header{
   height: 80vh;
 }
 
+div#header div.carousel-inner{
+  border-radius: 0 0 150px 0;
+}
+
 div#header div.carousel-item{
-  
+  border-radius: 0 0 150px 0;
+  background: #000
 }
 
 div#header div.carousel-img-1{
@@ -40,8 +70,9 @@ div#header div.carousel-img-1{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 110vh;
+  height: 100vh;
   border-radius: 0 0 150px 0;
+
 }
 
 div#header div.carousel-img-2{
@@ -49,7 +80,7 @@ div#header div.carousel-img-2{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 110vh;
+  height: 100vh;
   border-radius: 0 0 150px 0;
 
 }
@@ -58,8 +89,9 @@ div#header div.carousel-img-3{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 110vh;
+  height: 100vh;
   border-radius: 0 0 150px 0;
+
 }
 
 div#header div.text-header{
@@ -73,7 +105,7 @@ div#header div.text-header{
 
 div#header div.text-header h3{
   font-size: bold;
-  font-size: 3em;
+  font-size: 4em;
   border-bottom: 1px solid #DADADA;
   padding-bottom: 5px;
 }
@@ -82,4 +114,57 @@ div#header div.text-header p{
   margin-top: 0;
   font-size: 1.3em;
   padding: 0 3px;
+}
+
+
+/* editing article */
+div#article{
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+div#article div.learn-info h5{
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  letter-spacing: 1.2px;
+}
+
+div#article div.learn-info h2{
+  color: #1C2833;
+  padding: 0 450px 0 0;
+}
+
+div#article .container-card{
+  padding: 0 0 0 200px;
+  margin-top: 30px;
+}
+
+div#article .card-learn-link:hover{
+  text-decoration: none;
+}
+
+div#article .card-learn{
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  border: 1px solid #eee;
+  border-top:2px solid rgba(91,114,237,1);
+  padding: 20px 25px 10px 25px;
+  border-radius: 0 0 5px 5px;
+  transition: .3s ease-in-out;
+}
+
+div#article .card-learn:hover{
+  top: -3px;
+  box-shadow: 0 2px 30px #b3b3b3;
+}
+
+div#article .card-learn h5{
+  color: #1C2833;
+}
+
+div#article .card-learn p{
+  color: #b3b3b3;
 }
