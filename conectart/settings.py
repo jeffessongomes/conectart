@@ -136,9 +136,9 @@ MEDIA_URL = '/media/'
 # reset for email
 EMAIL_FILE_PATH = '/tmp/app-messages'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = 'entrego.oficialdelivery@gmail.com'
-EMAIL_HOST_PASSWORD = 'delivery.1234'
+EMAIL_HOST = "smtpi.espacoconectar-te.uni5.net"
+EMAIL_HOST_USER = 'admin@espacoconectar-te.uni5.net'
+EMAIL_HOST_PASSWORD = 'cliente.1234'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 PASSWORD_RESET_TIMEOUT_DAYS = 1

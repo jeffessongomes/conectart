@@ -61,7 +61,7 @@ def forget_password(request):
       email = mail.EmailMessage(
           'Suporte - Conectart',
           msg_html,   
-          'entrego.oficialdelivery@gmail.com', # 'from'
+          'admin@espacoconectar-te.uni5.net', # 'from'
           [user.email,], # 'to'
           connection=connection
       )
