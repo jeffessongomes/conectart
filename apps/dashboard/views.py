@@ -9,6 +9,11 @@ from django.core import mail
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 
+import json
+
+from .models import Events, Subscribe_User, Admin
+
+from .forms import EventForm, SubscribeForm
 
 
 def verifify_user(email, password):
@@ -121,3 +126,59 @@ def change_password(request):
 
   error = False
   return render(request, 'dashboard/change-password.html', {'error':error})
+
+
+# event crud
+@login_required(login_url='login')
+def add_event(request):
+  data = {}
+  if request.method == 'POST':
+    form = EventForm(data=request.POST, files=request.FILES)
+    if form.is_valid():
+      form.save()
+
+      return redirect('list_event')
+    else:
+      HttpResponse(json.dumps(form.errors))
+  else:
+    form = EventForm()
+  data['form'] = form
+
+  return render(request, 'dashboard/event/add-event.html', data)
+
+@login_required(login_url='login')
+def list_event(request):
+  data = {}
+  events = Events.objects.all()
+  data['events'] = events
+  return render(request, 'dashboard/event/list-event.html', data)
+
+@login_required(login_url='login')
+def edit_event(request, pk):
+  data = {}
+  event = Events.objects.get(pk=pk)
+  
+  if request.method == 'POST':
+    event.main_image.delete()
+    event.image_2.delete()
+    event.image_3.delete()
+    form = EventForm(data=request.POST, files=request.FILES, instance=event)
+    if form.is_valid():
+      form.save()
+      return redirect('index')
+    else:
+      
+      HttpResponse(json.dumps(form.errors))
+  else:
+    form = EventForm(instance=event)
+
+  data['form'] = form; data['event'] = event;
+
+  return render(request, 'dashboard/event/edit-event.html', data)
+
+@login_required(login_url='login')
+def delete_event(request, pk):
+  event = Events.objects.get(pk=pk)
+  event.delete()
+  return redirect('index')
+
