@@ -1,0 +1,367 @@
+/* Fonts */
+/* Font do menu */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+/* Geral */
+*{
+  scroll-behavior: smooth;
+}
+
+.line-none-pading > div{
+  padding: 0;
+}
+
+.container-btn-cto{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cto{
+  background: rgb(91,114,237);
+  background: linear-gradient(54deg, rgba(91,114,237,1) 25%, rgba(44,182,213,1) 75%);
+  width: 34%;
+  color: #FFF;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.btn-cto:hover{
+  width: 37%;
+  
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* Editando o menu */
+
+nav.navbar{
+  padding: 20px 0;
+}
+
+nav.navbar a.navbar-brand{
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833;
+}
+nav.navbar .nav-link{
+  /* text-transform: uppercase !important; */
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833 !important;
+}
+
+div#header{
+  height: 80vh;
+}
+
+div#header div.carousel-inner{
+  border-radius: 0 0 150px 0;
+}
+
+div#header div.carousel-item{
+  border-radius: 0 0 150px 0;
+  background: #000
+}
+
+div#header div.carousel-img-1{
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  border-radius: 0 0 150px 0;
+
+}
+
+div#header div.carousel-img-2{
+  background: #DADADA;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-radius: 0 0 150px 0;
+
+}
+
+div#header div.carousel-img-3{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  border-radius: 0 0 150px 0;
+
+}
+
+div#header div.text-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 50px;
+}
+
+div#header div.text-header h3{
+  font-size: bold;
+  font-size: 4em;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 5px;
+}
+
+div#header div.text-header p{
+  margin-top: 0;
+  font-size: 1.3em;
+  padding: 0 3px;
+}
+
+
+/* editing article */
+div#article{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+div#article div.learn-info h5{
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  letter-spacing: 1.2px;
+}
+
+div#article div.learn-info h2{
+  color: #1C2833;
+  padding: 0 450px 0 0;
+}
+
+div#article .container-card{
+  padding: 0 0 0 200px;
+  margin-top: 30px;
+}
+
+div#article .card-learn-link:hover{
+  text-decoration: none;
+}
+
+div#article .card-learn{
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  border: 1px solid #eee;
+  border-top:2px solid rgba(91,114,237,1);
+  padding: 20px 25px 10px 25px;
+  border-radius: 0 0 5px 5px;
+  transition: .3s ease-in-out;
+}
+
+div#article .card-learn:hover{
+  top: -3px;
+  box-shadow: 0 2px 30px #b3b3b3;
+}
+
+div#article .card-learn h5{
+  color: #1C2833;
+}
+
+div#article .card-learn p{
+  color: #b3b3b3;
+}
+
+/* editing about */
+
+div#sobre-nos{
+  margin-bottom: 300px;
+}
+
+div#sobre-nos h5{
+  font-size: 0.9em;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+div#sobre-nos h2{
+  padding: 10px 0;
+  color: #1C2833
+}
+
+div#sobre-nos p{
+  color: gray;
+}
+
+div#sobre-nos ul{
+  list-style: none;
+  color: gray;
+  padding: 0;
+}
+
+div#sobre-nos div.list-ul-about{
+  display: flex;
+}
+
+div#sobre-nos li{
+  padding: 5px 30px 5px 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+div#sobre-nos .container-btn-cto{
+  margin-top: 30px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+div#sobre-nos .btn-cto{
+  width: 37%;
+}
+
+div#sobre-nos .btn-cto:hover{
+  width: 37%;
+}
+
+
+div#sobre-nos div.about-info{
+  padding: 0 25px;
+}
+
+div.sobre-video{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+/* Clientes */
+div#clients{
+  margin-bottom: 300px;
+}
+
+
+div#clients .client-info h5{
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+
+div#clients .client-info h2{
+  text-align: center;
+  color: #1C2833;
+  margin-top: 10px;
+}
+
+div#clients .client-comment{
+  height: 170px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px #b3b3b3;
+  padding: 25px 0;
+}
+
+div#clients .client-comment h3{
+  font-size: 1.4em;
+  color: #1C2833;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+div#clients .client-comment p{
+  padding: 0 200px 0px 200px;
+}
+
+div#clients .checked{
+  color: orange;
+}
+
+
+/* photos gallery */
+
+div#gallery{
+  margin-bottom: 200px;
+}
+
+div.gallery-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #b3b3b3;
+}
+
+div.gallery-info h2{
+  text-align: center;
+  color: #1C2833;
+  margin-bottom: 50px;
+}
+
+
+/* contato */
+
+div#contact{
+  padding: 25px 0px;
+}
+
+.bg-contact{
+  position: relative;
+  top: 120px;
+  position: relative;
+  background: #FFF;
+  padding: 25px 0;
+  z-index: 31;
+}
+
+div.contact-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+div.contact-info h2{
+  text-align: center;
+}
+
+div#contact form{
+  margin-top: 25px;
+  padding: 0 30px;
+}
+
+div#contact form input{
+  text-align: center;
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+
+}
+div#contact form textarea{
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+}
+
+div#contact .container-btn-cto {
+  justify-content: start;
+}
+
+div#contact .btn-cto{
+  border-radius: 300px;
+  width: 17%;
+  padding: 13px 0;
+}
+
+div#rodape{
+  z-index: 30;
+  height: 70vh;
+  background: #2C3E50;
+}
