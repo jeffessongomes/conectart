@@ -1,0 +1,10 @@
+@media screen and (max-width: 1000px) {
+  /* Menu */
+  nav.bg-menu .home {
+    background: #ffc200;
+    transform: rotate(0deg) !important;
+  }
+  nav.bg-menu .home .nav-link{
+    transform: rotate(0deg);
+  }
+}

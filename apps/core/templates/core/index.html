@@ -1,193 +1,197 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ConectArt</title>
+  <title>ConectAR-TE</title>
   <script src="https://kit.fontawesome.com/e177f68271.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style-mobile.css' %}" />
+  <style>
+    /* Fonte MENU */
+    @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+    /* Fonte Header */
+    @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+    /* Fonte Cover */
+    @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+  </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">ConectArt</a>
+  <div id="header">
+    <div class="header-menu">
+      <div class="brand-menu">
+        <h2><span class="text-info">Espaço</span> <br />Conect<span class="text-danger">A</span><span class="text-info">R</span>-<span class="text-warning">T</span>E</h2>
+      </div>
+      <div class="cell-phone">
+        <h5>WhatsApp:</h5>
+        <h3>(84) 99441 - 2597</h3>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-menu">
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#header">Inicio<span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav mr-auto ml-auto ">
+          <li class="nav-item home">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#article">O que fazemos</a>
+          <li class="nav-item school">
+            <a class="nav-link" href="#">Sobre</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre-nos">Sobre nós</a>
+          <li class="nav-item gallery">
+            <a class="nav-link" href="#">Galeria</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#clients">Clientes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contato</a>
+          <li class="nav-item contact">
+            <a class="nav-link" href="#">Contato</a>
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <div id="header">
-    <div class="container-fluid">
-      <div class="row line-none-pading">
-        <div class="col-6">
-          <div id="carouselTec" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="carousel-img-1" style="background-image: url({% static 'img/school.jpg' %})"
-                  alt="Primeiro slide">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-img-2" style="background-image: url({% static 'img/boy.png' %})"
-                  alt="Primeiro slide">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-img-3" style="background-image: url({% static 'img/office.jpg' %})"
-                  alt="Primeiro slide">
-                </div>
-              </div>
-            </div>
+    </nav>
+  </div>
+  <div class="cover">
+    <div class="bg-cover">
+      <div>
+        <!-- <p>Revele o seu <br /><strong>talento</strong></p>
+        <a href="#">Registre seu filho</a> -->
+        <h3>Vamos colocar em prática os 5R's na nossa vida?
+          <br> <span>Então vamos começar:</span>
+        </h3>
+        <div class="btn-container-5">
+          <div>
+            <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Reduza</a>
+            <a href="#" class="btn text-white btn-warning">Repense</a>
           </div>
-        </div>
-        <div class="col-6">
-          <div class="text-header">
-            <h3>ConectART</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, incidunt.</p>
-            <div class="container-btn-cto">
-              <a class="btn-cto" href="#contact">Envie um e-mail</a>
-            </div>
+          <div>
+            <a href="#" class="btn btn-danger">Recuse</a>
+          </div>
+          <div>
+            <a href="#" class="btn btn-info">Reutilize</a>
+            <a href="#" class="btn btn-dark">Recicle</a>
           </div>
         </div>
       </div>
     </div>
+    <!-- <div class="divide-to-sobre">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="svg-edit" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+          c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+          c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+      </svg>
+    </div> -->
   </div>
 
-  <div id="article">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="learn-info">
-            <h5>O que você vai aprender</h5>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-          </div>
-        </div>
-      </div>
-      <div class="container-card">
+  <div id="sobre">
+    <div class="bg-sobre">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
+          <div class="col-12 pl-0 pr-0">
           </div>
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="card-learn-link" href="#">
-              <div class="card-learn">
-                <h5>Pintar</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est harum dicta suscipit pariatur
-                  autem totam corrupti, numquam.</p>
-              </div>
-            </a>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="info-sobre">
+              <h2>
+                <span class="text-primary">ART</span> <span class="text-warning">SCHOOL</span><br>
+                <span class="text-danger">FOR</span> <span class="text-info">YOUNG </span> PICASSOS
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="sobre-nos">
-    <div class="container">
+  <div id="eventos">
+    <div class="container-fluid">
       <div class="row">
+        <div class="col-12">
+          <h2 class="title-container">OUR EVENTS</h2>
+        </div>
         <div class="col-6">
-          <div class="sobre-video">
-            <video class="w-100 img-thumbnail" controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+          <div class="info-events">
+            <div class="symbol-events">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="text-events">
+              <h4>
+                CHILDREN'S
+                CLASSES
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-6">
-          <div class="about-info">
-            <h5>Sobre nós</h5>
-            <h2>Somos</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, similique. Vero culpa et illum id
-              quia dicta nemo enim, consequatur repellat, doloremque maxime nobis, accusamus ullam! Ipsam earum non
-              iste.</p>
-
-            <div class="list-ul-about">
-              <ul>
-                <li><i class="fas fa-check text-success"></i> Artista</li>
-                <li><i class="fas fa-check text-success"></i> Formado</li>
-                <li><i class="fas fa-check text-success"></i> Professor</li>
-              </ul>
-              <ul>
-                <li><i class="fas fa-check text-success"></i> Lorem</li>
-                <li><i class="fas fa-check text-success"></i> Lorem</li>
-                <li><i class="fas fa-check text-success"></i> Lorem</li>
-              </ul>
-              <ul>
-                <li><i class="fas fa-check text-success"></i> Artista</li>
-                <li><i class="fas fa-check text-success"></i> Formado</li>
-                <li><i class="fas fa-check text-success"></i> Professor</li>
-              </ul>
+          <div class="info-events">
+            <div class="symbol-events">
+              <i class="fas fa-user-friends"></i>
             </div>
-            <div class="container-btn-cto">
-              <a class="btn-cto" href="#contact">Envie um e-mail</a>
+            <div class="text-events">
+              <h4>
+                CHILDREN'S
+                CLASSES
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="info-events">
+            <div class="symbol-events">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="text-events">
+              <h4>
+                CHILDREN'S
+                CLASSES
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="info-events">
+            <div class="symbol-events">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="text-events">
+              <h4>
+                CHILDREN'S
+                CLASSES
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+              </p>
             </div>
           </div>
         </div>
@@ -195,122 +199,43 @@
     </div>
   </div>
 
-  <div id="clients">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="client-info">
-            <h5>Depoimentos</h5>
-            <h2>O que estão falando de nós?</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="client-comment">
-                  <div class="mb-2">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </div>
-                  <h3>Jeffesson</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sit dolor recusandae minus veniam est quasi architecto repudiandae vel dolore voluptas placeat.
 
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="client-comment">
-                  <div class="mb-2">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-                  <h3>Jeffesson</h3>
-                  <p>Gosto muito da forma como sou tratado na sala de aula.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="client-comment">
-                  <div class="mb-2">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-                  <h3>Jeffesson Gomes de Almeida</h3>
-                  <p>Gosto muito da forma como sou tratado na sala de aula.</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="container-btn-cto">
-            <a class="btn-cto text-center" href="#contact">Envie um e-mail</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="gallery">
+  <div id="gallery" class="mt-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="gallery-info">
-            <h5>FOTOS</h5>
-            <h2>Nossas fotos</h2>
+            <h2 class="title-container">Nossas fotos</h2>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/about.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/office.jpg' %}" />
+          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
         </div>
       </div>
     </div>
@@ -348,7 +273,7 @@
               </div>
             </div>
             <div class="container-btn-cto mt-3">
-              <a class="btn-cto text-center" href="#contact">Enviar <i class="fas fa-paper-plane"></i></a>
+              <a class="btn btn-primary" href="#contact">Enviar <i class="fas fa-paper-plane"></i></a>
             </div>
           </form>
         </div>
@@ -367,6 +292,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
 </body>
 
 </html>

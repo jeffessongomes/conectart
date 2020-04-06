@@ -1,0 +1,300 @@
+/* Header */
+div#header{
+  background-color: #4b68e7;
+}
+
+div#header .header-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 100px;
+  position: relative;
+  top: 50px;
+}
+
+div#header .header-menu > div{
+  color: #FFF;
+}
+
+div#header .header-menu .brand-menu h2{
+  font-size: 3em;
+  color: #1a23c9;
+}
+
+div#header .header-menu .cell-phone h5{
+  text-align: right;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+div#header .header-menu .cell-phone h3{
+  text-align: right;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 3em;
+  font-weight: 500;
+}
+
+/* Editando menu */
+nav.bg-menu{
+  background: transparent !important;
+  position: relative;
+  top: 50px;
+}
+
+nav.bg-menu .nav-item{
+  background: #FFF;
+  margin: 0 10px;
+  padding: 17px 55px;
+  border-radius: 15px;
+  transition: .2s ease-in-out;
+}
+
+nav.bg-menu .nav-item:hover{
+  transform: rotate(-7deg);
+}
+
+nav.bg-menu .nav-item .nav-link{
+  color: #FFF;
+  font-size: 1.6em;
+  font-family: 'Spicy Rice', cursive;
+  font-weight: 100;
+
+}
+
+nav.bg-menu .nav-item .nav-link:hover{
+  color: #FFF;
+}
+
+nav.bg-menu .home {
+  background: #ffc200;
+  transform: rotate(-7deg) !important;
+}
+
+nav.bg-menu .home .nav-link{
+  transform: rotate(7deg);
+
+}
+
+nav.bg-menu .school{
+  background: #0ec7a7;
+}
+
+nav.bg-menu .gallery{
+  background: #f73961;
+}
+
+nav.bg-menu .contact{
+  background: #ac26c3;
+}
+
+/* Editando cover */
+div.cover{
+  background: url('../img/kids.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.divide-to-sobre{
+  background: rgba(0, 0, 0, 0.2);
+}
+
+div.divide-to-sobre .svg-edit{
+  fill: #FFF;
+}
+
+div.cover div.bg-cover{
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 240px 250px;
+}
+
+div.cover div.bg-cover h3{
+  font-size: 3em;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0 0 50px #000;
+}
+
+div.cover div.bg-cover h3 span{
+  color: #5DADE2;
+}
+
+div.cover div.bg-cover .btn-container-5{
+  display: flex;
+  justify-content: center;
+}
+
+div.cover div.bg-cover .btn-container-5 a{
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+div.cover div.bg-cover .btn-container-5 div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* SOBRE */
+
+div#sobre{
+  height: 100%;
+  background: url('../img/cover-2.jpeg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+}
+
+div#sobre div.bg-sobre{
+  padding: 30px 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 64%, rgba(44,182,213,0) 83%, rgba(255,255,255,1) 100%);
+}
+
+div#sobre div.info-sobre h2{
+  font-size: 7em;
+  font-weight: bold;
+  padding: 0 30px;
+  font-family: 'Caveat Brush', cursive;
+}
+
+div#sobre div.info-sobre p{
+  font-size: 1.3em;
+  text-align: justify;
+  padding: 0 600px 0 30px;
+}
+
+/* EVENTOS */
+div#eventos{
+  background-image: url('../img/black.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 30px 30px;
+}
+
+.title-container{
+  font-size: 5em;
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
+  color: #FFF;
+  margin: 33px 0;
+}
+
+div#eventos .info-events{
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  margin-top: 30px;
+}
+
+div#eventos .symbol-events{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  width: 350px;
+  height: 82.22px;
+  background-color: #FFF;
+  border-radius: 100%;
+  color: #000;
+  font-size: 3em;
+}
+
+div#eventos .text-events{
+  padding: 0 20px;
+}
+
+div#eventos .text-events h4{
+  font-weight: bold;
+}
+
+/* photos gallery */
+
+div#gallery{
+  margin-bottom: 200px;
+}
+
+div.gallery-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #b3b3b3;
+}
+
+div.gallery-info h2{
+  text-align: center;
+  color: #1C2833;
+  margin-bottom: 50px;
+}
+
+/* contato */
+
+div#contact{
+  padding: 25px 0px;
+}
+
+.bg-contact{
+  position: relative;
+  top: 120px;
+  position: relative;
+  background: #FFF;
+  padding: 25px 0;
+  z-index: 31;
+}
+
+div.contact-info h5{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+div.contact-info h2{
+  text-align: center;
+}
+
+div#contact form{
+  margin-top: 25px;
+  padding: 0 30px;
+}
+
+div#contact form input{
+  text-align: center;
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+
+}
+div#contact form textarea{
+  border-radius: 0;
+  background: #EBEDEF;
+  border-color: #EBEDEF;
+}
+
+div#contact .container-btn-cto {
+  justify-content: start;
+}
+
+div#contact .btn-cto{
+  border-radius: 300px;
+  width: 17%;
+  padding: 13px 0;
+}
+
+div#rodape{
+  z-index: 30;
+  height: 70vh;
+  background: #2C3E50;
+}
