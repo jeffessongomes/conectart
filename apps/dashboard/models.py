@@ -29,3 +29,7 @@ class Subscribe_User(models.Model):
 
 	def __str__(self):
 		return str(self.user)+" / "+str(self.events)
+
+class Photos(models.Model):
+	image = models.ImageField(upload_to='image')
+	

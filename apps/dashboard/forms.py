@@ -1,5 +1,5 @@
 from django import forms
-from .models import Events, Subscribe_User, Admin
+from .models import Events, Subscribe_User, Admin, Photos
 
 class EventForm(forms.ModelForm):
     class Meta:
@@ -27,3 +27,19 @@ class SubscribeForm(forms.ModelForm):
                 field.widget.attrs['class'] += ' form-control'
             else:
                 field.widget.attrs['class']='form-control'
+
+
+class PhotoForm(forms.ModelForm):
+    class Meta:
+        model = Photos
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(PhotoForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            if field.widget.attrs.get('class'):
+                field.widget.attrs['class'] += ' form-control'
+            else:
+                field.widget.attrs['class']='form-control'
+
+                
