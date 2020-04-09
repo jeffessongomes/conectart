@@ -29,7 +29,7 @@
       </div>
       <div class="cell-phone">
         <h5>WhatsApp:</h5>
-        <h3>(84) 99441 - 2597</h3>
+        <h3>(84) 99695 - 4811</h3>
       </div>
     </div>
 
@@ -100,15 +100,11 @@
           <div class="col-12">
             <div class="info-sobre">
               <h2>
-                <span class="text-primary">ART</span> <span class="text-warning">SCHOOL</span><br>
-                <span class="text-danger">FOR</span> <span class="text-info">YOUNG </span> PICASSOS
+                <span class="text-primary">Sobre</span> <span class="text-warning">o</span><br>
+                <span class="text-danger">nosso</span> <span class="text-info">projeto </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                {{our.details}}
               </p>
             </div>
           </div>
@@ -210,33 +206,11 @@
         </div>
       </div>
       <div class="row">
+        {% for photo in photos %}
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
+          <img class="w-100 rounded" height="400px" src="{{photo.image.url}}" />
         </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
-        <div class="col-4 mt-3">
-          <img class="w-100 rounded" src="{% static 'img/ConectAR-TE.png' %}" />
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

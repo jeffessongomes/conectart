@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -11,10 +11,18 @@ from .tokens import account_activation_token
 
 import json
 
-from .models import Events, Subscribe_User, Admin
+from .models import Events, Subscribe_User, Admin, TecDashImages, Our, Photos
+from .forms import EventForm, SubscribeForm, OurForm, PhotoForm
 
-from .forms import EventForm, SubscribeForm
 
+@login_required(login_url='login')
+def home(request):
+  data = {}
+
+  data['option'] = TecDashImages.objects.all()
+  
+
+  return render(request, 'dashboard/dashboard.html', data)  
 
 def verifify_user(email, password):
   try:
@@ -159,13 +167,10 @@ def edit_event(request, pk):
   event = Events.objects.get(pk=pk)
   
   if request.method == 'POST':
-    event.main_image.delete()
-    event.image_2.delete()
-    event.image_3.delete()
     form = EventForm(data=request.POST, files=request.FILES, instance=event)
     if form.is_valid():
       form.save()
-      return redirect('index')
+      return redirect('home')
     else:
       
       HttpResponse(json.dumps(form.errors))
@@ -180,5 +185,83 @@ def edit_event(request, pk):
 def delete_event(request, pk):
   event = Events.objects.get(pk=pk)
   event.delete()
-  return redirect('index')
+  return redirect('home')
 
+
+# edit our
+@login_required(login_url='login')
+def edit_our(request):
+  data = {}
+
+  try:
+    our = Our.objects.get(pk=1)
+  except Our.DoesNotExist:
+    our = Our.objects.create(details="escreva aqui o que deverá ficar em 'Sobre o nosso projeto'")
+  
+  
+  if request.method == 'POST':
+    form = OurForm(data=request.POST, instance=our)
+    if form.is_valid():
+      form.save()
+      return redirect('home')
+    else:
+      
+     HttpResponse(json.dumps(form.errors))
+  else:
+    form = OurForm(instance=our)
+
+  data['form'] = form; data['our'] = our;
+
+  return render(request, 'dashboard/our/edit-our.html', data)
+
+
+# photos crud
+@login_required(login_url='login')
+def add_photo(request):
+  data = {}
+  if request.method == 'POST':
+    form = PhotoForm(data=request.POST, files=request.FILES)
+    if form.is_valid():
+      form.save()
+
+      return redirect('list_photo')
+    else:
+      HttpResponse(json.dumps(form.errors))
+  else:
+    form = PhotoForm()
+  data['form'] = form
+
+  return render(request, 'dashboard/photos/add-photo.html', data)
+
+@login_required(login_url='login')
+def list_photo(request):
+  data = {}
+  photos = Photos.objects.all()
+  data['photos'] = photos
+  return render(request, 'dashboard/photos/list-photo.html', data)
+
+@login_required(login_url='login')
+def edit_photo(request, pk):
+  data = {}
+  photo = Photos.objects.get(pk=pk)
+  
+  if request.method == 'POST':
+    form = PhotoForm(data=request.POST, files=request.FILES, instance=photo)
+    if form.is_valid():
+      form.save()
+      return redirect('home')
+    else:
+      
+      HttpResponse(json.dumps(form.errors))
+  else:
+    form = PhotoForm(instance=photo)
+
+  data['form'] = form; data['photo'] = photo;
+
+  return render(request, 'dashboard/photos/edit-photo.html', data)
+
+@login_required(login_url='login')
+def delete_photo(request, pk):
+  photo = Photos.objects.get(pk=pk)
+  photo.delete()
+  return redirect('home')

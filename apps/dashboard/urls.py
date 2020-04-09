@@ -3,7 +3,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-  
+	path('', views.home, name="home"),	
+
 	path('login', views.do_login, name="login"),
 	path('logout', views.do_logout, name="logout"),
 
@@ -16,6 +17,14 @@ urlpatterns = [
 	path('edit_event/<int:pk>', views.edit_event, name="edit_event"),
 	path('list_event', views.list_event, name="list_event"),
 	path('delete_event/<int:pk>', views.delete_event, name="delete_event"),
+
+	# crud 
+	path('add_photo', views.add_photo, name="add_photo"),
+	path('edit_photo/<int:pk>', views.edit_photo, name="edit_photo"),
+	path('list_photo', views.list_photo, name="list_photo"),
+	path('delete_photo/<int:pk>', views.delete_photo, name="delete_photo"),
+
+	path('edit_our', views.edit_our, name="edit_our"),
 
 ]
 

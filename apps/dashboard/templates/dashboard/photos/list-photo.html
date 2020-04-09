@@ -4,21 +4,19 @@
 {% block conteudo %}
 <div class="content">
 	<div class="container">
-		{% if events.all %}
+		{% if photos.all %}
 		<div class="mt-4 mb-2 pb-3 border-bottom">
 			<div align="center">
-				<a href="{% url 'add_event'  %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+				<a href="{% url 'add_photo'  %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
 			</div>
 		</div>
 		{% endif %}
-		{% for event in events %}
+		{% for photo in photos %}
 		<div class="row border-bottom pt-3">
 			<div class="col-8">
 				<div>
-					<h4 class="text-center font-weight-bold">{{product.name}}</h4>
-					<p>{{event.details}}</p>
 					<div class="d-flex justify-content-center">
-						<img width="200" src="{{event.main_image.url}}">
+						<img width="200" src="{{photo.image.url}}">
 						
 					</div>
 
@@ -26,22 +24,22 @@
 			</div>
 			<div class="col-4">
 				<div class="text-center">
-					<a href="{% url 'edit_event' event.pk %}" class="btn w-50  btn-primary">EDITAR</a>
+					<a href="{% url 'edit_photo' photo.pk %}" class="btn w-50  btn-primary">EDITAR</a>
 				</div>
 				<div class="text-center">
-					<a href="{% url 'delete_event' event.pk %}" class="btn w-50 mt-2 btn-danger">APAGAR</a>
+					<a href="{% url 'delete_photo' photo.pk %}" class="btn w-50 mt-2 btn-danger">APAGAR</a>
 				</div>
 			</div>
 		</div>
 		{% empty %}
 		<div align="center">
-			<a href="{% url 'add_event' %}" class="btn btn-success">ADICIONAR</a>
+			<a href="{% url 'add_photo' %}" class="btn btn-success">ADICIONAR</a>
 		</div>
 		{% endfor %}
-		{% if events.all %}
+		{% if photos.all %}
 			<div class="mt-4 mb-4 pt-3 border-top">
 				<div align="center">
-					<a href="{% url 'add_event' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+					<a href="{% url 'add_photo' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
 				</div>
 			</div>
 		{% endif %}

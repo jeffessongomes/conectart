@@ -9,16 +9,16 @@ class Admin(models.Model):
 	password = models.CharField(max_length=30)
 
 class Events(models.Model):
-	name = models.CharField(max_length=500)
-	details = models.TextField()
-	city = models.CharField(max_length=500)
-	district = models.CharField(max_length=500)
-	street = models.CharField(max_length=500)
-	day = models.CharField(max_length=500)
-	hour = models.CharField(max_length=500)
-	main_image = models.ImageField(upload_to='image_product')
-	image_2 = models.ImageField(upload_to='image_product', null=True, blank=True)
-	image_3 = models.ImageField(upload_to='image_product', null=True, blank=True)
+	name = models.CharField('nome', max_length=500)
+	details = models.TextField('detalhes')
+	city = models.CharField('cidade', max_length=500)
+	district = models.CharField('bairro', max_length=500)
+	street = models.CharField('rua', max_length=500)
+	day = models.CharField('dia', max_length=500)
+	hour = models.CharField('hora', max_length=500)
+	main_image = models.ImageField('imagem principal', upload_to='image_event')
+	image_2 = models.ImageField('imagem 2', upload_to='image_event', null=True, blank=True, help_text=('Imagem não obrigatória. '))
+	image_3 = models.ImageField('imagem 3', upload_to='image_event', null=True, blank=True, help_text=('Imagem não obrigatória. '))
 	
 	def __str__(self):
 		return self.name
@@ -31,5 +31,16 @@ class Subscribe_User(models.Model):
 		return str(self.user)+" / "+str(self.events)
 
 class Photos(models.Model):
-	image = models.ImageField(upload_to='image')
+	image = models.ImageField('Imagem', upload_to='image')
 	
+class TecDashImages(models.Model):
+	title = models.CharField(max_length=500, null=True)
+	slug = models.CharField(max_length=100, null=True)
+	details = models.TextField()
+	image = models.ImageField(upload_to='image/dash')
+
+	def __str__(self):
+		return self.title
+
+class Our(models.Model):
+	details = models.TextField('detalhes')
