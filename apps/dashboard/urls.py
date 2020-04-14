@@ -26,6 +26,12 @@ urlpatterns = [
 
 	path('edit_our', views.edit_our, name="edit_our"),
 
+	path('list_subscribe/<int:pk>', views.list_client, name="list_subscribe"),
+	path('choose_event', views.choose_event, name="choose_event"),
+
+
+	path('list_comment', views.list_comment, name="list_comment"),
+	
 ]
 
 

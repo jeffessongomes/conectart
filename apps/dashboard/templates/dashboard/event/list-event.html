@@ -5,45 +5,52 @@
 <div class="content">
 	<div class="container">
 		{% if events.all %}
-		<div class="mt-4 mb-2 pb-3 border-bottom">
+		<div class="mt-4 mb-4 pt-3 border-top">
 			<div align="center">
-				<a href="{% url 'add_event'  %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+				<a href="{% url 'add_event' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
 			</div>
 		</div>
 		{% endif %}
 		{% for event in events %}
-		<div class="row border-bottom pt-3">
-			<div class="col-8">
-				<div>
-					<h4 class="text-center font-weight-bold">{{product.name}}</h4>
-					<p>{{event.details}}</p>
-					<div class="d-flex justify-content-center">
-						<img width="200" src="{{event.main_image.url}}">
-						
+
+		<div id="article">
+			<div class="list">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-12 col-md-6">
+							<div class="list_products">
+								<div class="title-product">
+									<h3>{{event.name}}</h3>
+								</div>
+								<p>{{event.details}}</p>
+								<div class="img-product">
+									<img class="img-thumbnail" src="{{event.main_image.url}}" />
+								</div>
+								<div class="btn-product-container">
+									<a href="{% url 'edit_event' event.pk %}" class="btn mr-3 btn-warning">Editar</a>
+									<a href="{% url 'delete_event' event.pk %}" class="btn btn-danger">Apagar</a>
+								</div>
+							</div>
+						</div>
 					</div>
 
 				</div>
-			</div>
-			<div class="col-4">
-				<div class="text-center">
-					<a href="{% url 'edit_event' event.pk %}" class="btn w-50  btn-primary">EDITAR</a>
-				</div>
-				<div class="text-center">
-					<a href="{% url 'delete_event' event.pk %}" class="btn w-50 mt-2 btn-danger">APAGAR</a>
-				</div>
+
 			</div>
 		</div>
 		{% empty %}
-		<div align="center">
-			<a href="{% url 'add_event' %}" class="btn btn-success">ADICIONAR</a>
+		<div class="mt-4 mb-4 pt-3 border-top">
+			<div align="center">
+				<a href="{% url 'add_event' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+			</div>
 		</div>
 		{% endfor %}
 		{% if events.all %}
-			<div class="mt-4 mb-4 pt-3 border-top">
-				<div align="center">
-					<a href="{% url 'add_event' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
-				</div>
+		<div class="mt-4 mb-4 pt-3 border-top">
+			<div align="center">
+				<a href="{% url 'add_event' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
 			</div>
+		</div>
 		{% endif %}
 	</div>
 </div>	

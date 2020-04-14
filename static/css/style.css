@@ -298,3 +298,28 @@ div#rodape{
   height: 70vh;
   background: #2C3E50;
 }
+
+
+/* Event container */
+div#container-event{
+  margin: 140px 0;
+}
+
+div#container-event h3{
+  font-size: 2.6em;
+  font-weight: bold;
+  padding: 0 150px;
+}
+
+div#container-event .sub-title{
+  color: #aaa;
+}
+
+div#container-event p{
+  text-indent: 30px;
+  margin-top: 15px;
+}
+
+div#container-event img{
+  width: 400px;
+}

@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background-color: #4d4d4d!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 80%;
+    padding: 20px;
+}
+
+.container h3{
+    width: 100%;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container .line100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+}
+
+.container .line100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.container .line100 .input{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
+
+.container .line100 .input input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #4d4d4d!important;
+}
+
+.container .line100 .input .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .line100 .input input:focus + .text, .container .line100 .input input:valid + .text{
+  top: -35px;
+  left: -10px
+}
+
+.container .line100 .input .line{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .line100 .input input:focus ~ .line, .container .line100 .input input:valid ~ .line{
+  height: 100%
+}
+
+.subbutton {
+  transition: 0.2s;
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  color:black;
+  font-size: 15px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.subbutton:hover{
+  transition: 0.2s;
+  width: 120px;
+  font-size: 18px
+}
+
+/* TESTE DO INPUT */
+.inputFile {
+  transition: 0.2s;
+  background-color: white;
+  width: 250px;
+  height: 40px;
+  color:black;
+  font-size: 15px;
+  border-radius: 0px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputFile span {
+    display: block;
+    position: absolute;
+}
+.inputFile input {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    font-size: 100px; /* Aumenta tamanho do campo */
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/* Geral */
+.cursor-point{
+  cursor: pointer;
+}

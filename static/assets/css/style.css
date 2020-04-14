@@ -1,3 +1,8 @@
+/* Geral */
+div#article{
+	min-height: 80vh;
+}
+
 /* Editando opções */
 
 a{
@@ -26,14 +31,13 @@ div.option-edit .bg-option{
 	flex-direction: column;
 	justify-content: space-around;
 	border-radius: 10px;
-	min-height: 150px;
-	padding: 20px 25px;
-	background: rgba(39, 55, 70, 0.8);
+	padding: 80px 25px;
+	background: rgba(39, 55, 70, 1);
 	transition: 0.2s;
 }
 
 div.option-edit .bg-option:hover{
-	background: rgba(39, 55, 70, 0.9);
+	background: rgba(39, 55, 70, 1);
 }
 
 div.option-edit .bg-option h2{
@@ -49,26 +53,94 @@ div.option-edit .bg-option p{
 /* Rodape */
 
 div#footer{
-	margin-top: 30px;
-	padding: 20px;
+	margin-top: 20px;
+	padding: 30px;
 	text-align: center;
 }
 
-
-
-/*editando form*/
-.bg-form{
-	background: #FFF;
-	padding: 20px 80px;
+/* Editando o listar produto */
+div.list{
+	margin-top: 20px;
+}
+div.list .info-btn-tec{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-top: 2px solid #28B463;
+	border-radius: 10px;
 }
 
-.form-group{
-	padding: 10px 20px;
-	border: 1px solid #EEE;
-	border-radius: 5px;
+
+div.list .info-btn-tec .add-btn{
+	position: relative;
+	top: -25px;
+	background: #28B463;
+	padding: 12px 20px;
+	border-radius: .5rem;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s ease-in-out;
+}
+
+div.list .info-btn-tec-bottom{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-bottom: 2px solid #28B463;
+	border-radius: 10px;
+	margin-bottom: 20px;
 }
 
 
-.content{
-	min-height: 77vh;
+div.list .info-btn-tec-bottom .add-btn{
+	position: relative;
+	top: 25px;
+	background: #28B463;
+	padding: 12px 20px;
+	border-radius: .5rem;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s ease-in-out;
+}
+
+div.list .add-btn:hover{
+	background: #186A3B;
+}
+
+div.list div.list_products{
+	min-height: 58vh;
+}
+
+div.list div.list_products{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div.list div.list_products .title-product{
+	font-weight: bold;
+	text-transform: uppercase;
+	border-top: 1px dashed #000;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: .5rem;
+}
+
+div.list div.list_products .img-product img{
+	width: 100%;
+}
+
+div.list div.list_products .btn-product-container{
+	border-bottom: 1px dashed #000;
+	border-radius: .5rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
 }

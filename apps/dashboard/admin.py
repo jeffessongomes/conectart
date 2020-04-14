@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Events, Subscribe_User, Admin, TecDashImages, Our
+from .models import Events, Subscribe_User, Admin, TecDashImages, Our, Client, Comments
 
+admin.site.register(Comments)
+admin.site.register(Client)
 admin.site.register(Our)
 admin.site.register(TecDashImages)
 admin.site.register(Events)

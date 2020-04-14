@@ -9,10 +9,24 @@ from django.core import mail
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 
+from django.http import HttpResponse
 import json
 
-from .models import Events, Subscribe_User, Admin, TecDashImages, Our, Photos
-from .forms import EventForm, SubscribeForm, OurForm, PhotoForm
+from .models import Events, Subscribe_User, Comments, TecDashImages, Our, Photos, Client
+from .forms import EventForm, SubscribeForm, OurForm, PhotoForm, ClientForm
+
+
+# my custom login
+def my_login_required(function):
+    def wrapper(request, *args, **kw): 
+        if not request.session.get('brand_id'):
+
+          return HttpResponseRedirect('/dashboard/login')
+        else:
+          return function(request, *args, **kw)
+    return wrapper
+
+
 
 
 @login_required(login_url='login')
@@ -24,6 +38,7 @@ def home(request):
 
   return render(request, 'dashboard/dashboard.html', data)  
 
+
 def verifify_user(email, password):
   try:
     user = User.objects.get(email=email)
@@ -31,8 +46,12 @@ def verifify_user(email, password):
     user = None
     
   if user is not None:
-    user = authenticate(username=user.username, password=password)
-    return user
+    if user.is_staff == True:
+      user = authenticate(username=user.username, password=password)
+      return user
+    else:
+      user = 0
+      return user
   else:
     return user
 
@@ -42,10 +61,14 @@ def do_login(request):
     email = request.POST['email']; 
     password = request.POST['password'];
     user = verifify_user(email, password) 
-        
+    
+
     if user is not None:
-      login(request, user)
-      return redirect('index')
+      if user == 0:
+        return HttpResponse("<h1>Você não tem autorização para acessar essa página</h1>")
+      else:
+        login(request, user)
+        return redirect('index')
     else:
       error = True
       return render(request, 'dashboard/telaLogin.html', {'error': error})
@@ -134,6 +157,27 @@ def change_password(request):
 
   error = False
   return render(request, 'dashboard/change-password.html', {'error':error})
+
+def choose_event(request):
+  data = {}
+  events = Events.objects.all()
+  data['events'] = events
+  return render(request, 'dashboard/client/choose-event.html', data)
+
+
+@login_required(login_url='login')
+def list_client(request, pk):
+  data = {}
+  clients = Client.objects.filter(events=pk)
+  data['clients'] = clients
+  return render(request, 'dashboard/client/list-client.html', data)
+
+@login_required(login_url='login')
+def list_comment(request):
+  data = {}
+  comments = Comments.objects.all()
+  data['comments'] = comments
+  return render(request, 'dashboard/comments/list-comment.html', data)
 
 
 # event crud

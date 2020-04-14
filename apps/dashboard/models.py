@@ -8,12 +8,14 @@ class Admin(models.Model):
 	email = models.EmailField(unique=True)
 	password = models.CharField(max_length=30)
 
+
+
 class Events(models.Model):
 	name = models.CharField('nome', max_length=500)
 	details = models.TextField('detalhes')
 	city = models.CharField('cidade', max_length=500)
 	district = models.CharField('bairro', max_length=500)
-	street = models.CharField('rua', max_length=500)
+	street = models.CharField('rua', max_length=500, help_text=('Nome da rua e o número da habitação'))
 	day = models.CharField('dia', max_length=500)
 	hour = models.CharField('hora', max_length=500)
 	main_image = models.ImageField('imagem principal', upload_to='image_event')
@@ -22,6 +24,20 @@ class Events(models.Model):
 	
 	def __str__(self):
 		return self.name
+
+class Client(models.Model):
+	name = models.CharField(max_length=500)
+	email = models.EmailField()
+	events = models.ForeignKey(Events, on_delete=models.CASCADE, null=True, blank=True)
+
+class Comments(models.Model):
+	email = models.EmailField()
+	title = models.CharField(max_length=500)
+	whatsapp = models.CharField(max_length=100, null=True)
+	details = models.TextField()
+
+	def __str__(self):
+		return self.title
 
 class Subscribe_User(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
