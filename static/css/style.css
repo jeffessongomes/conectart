@@ -7,7 +7,7 @@ div#header .header-menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 100px;
+  padding: 30px 100px;
   position: relative;
   top: 50px;
 }
@@ -19,19 +19,21 @@ div#header .header-menu > div{
 div#header .header-menu .brand-menu h2{
   font-size: 3em;
   color: #1a23c9;
+  font-family: 'Caveat Brush', cursive;
+  font-weight: bold;
 }
 
 div#header .header-menu .cell-phone h5{
   text-align: right;
   font-family: 'Caveat Brush', cursive;
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-weight: 500;
 }
 
 div#header .header-menu .cell-phone h3{
   text-align: right;
   font-family: 'Caveat Brush', cursive;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 500;
 }
 
@@ -105,7 +107,7 @@ div.divide-to-sobre .svg-edit{
 }
 
 div.cover div.bg-cover{
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.9);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -179,7 +181,7 @@ div#eventos{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 30px 30px;
+  padding: 30px 30px 80px 30px;
 }
 
 .title-container{
@@ -211,12 +213,23 @@ div#eventos .symbol-events{
 }
 
 div#eventos .text-events{
-  padding: 0 20px;
+  padding: 12px 20px;
+  text-align: center;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px #000;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 div#eventos .text-events h4{
   font-weight: bold;
+  font-size: 2em;
 }
+div#eventos .text-events p{
+  text-align: justify;
+  text-indent: 30px;
+}
+
 
 /* photos gallery */
 
@@ -236,6 +249,19 @@ div.gallery-info h2{
   text-align: center;
   color: #1C2833;
   margin-bottom: 50px;
+}
+
+div#gallery .container-img-gallery{
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+}
+
+
+div#gallery .container-img-gallery img{
+  height: 300px;
+  object-fit: cover;
 }
 
 /* contato */
@@ -295,10 +321,14 @@ div#contact .btn-cto{
 
 div#rodape{
   z-index: 30;
-  height: 70vh;
   background: #2C3E50;
+  padding: 170px 0 50px 0;  
 }
 
+div#rodape p{
+  text-align: center;
+  color: #FFF;
+}
 
 /* Event container */
 div#container-event{

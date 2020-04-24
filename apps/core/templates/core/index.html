@@ -25,7 +25,7 @@
   <div id="header">
     <div class="header-menu">
       <div class="brand-menu">
-        <h2><span class="text-info">Espaço</span> <br />Conect<span class="text-danger">A</span><span class="text-info">R</span>-<span class="text-warning">T</span>E</h2>
+        <h2 class="text-white"><span class="text-info">Espaço</span> <br />Conect<span class="text-danger">A</span><span class="text-info">R</span>-<span class="text-warning">T</span>E</h2>
       </div>
       <div class="cell-phone">
         <h5>WhatsApp:</h5>
@@ -67,15 +67,28 @@
         </h3>
         <div class="btn-container-5">
           <div>
-            <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Reduza</a>
-            <a href="#" class="btn text-white btn-warning">Repense</a>
+            <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="O trabalho, o estresse, a ansiedade, as preocupações, os pensamentos, a pressa, a dominância, o medo, ...">Reduza</a>
+            <a href="#" class="btn text-white btn-warning"
+            data-toggle="tooltip" data-placement="top" title="O que realmente importa, suas escolhas, valores, ..."
+            >Repense</a>
           </div>
           <div>
-            <a href="#" class="btn btn-danger">Recuse</a>
+            <a href="#" class="btn btn-danger"
+            data-toggle="tooltip" data-placement="top" title="O que não lhe faz bem (preguiça, comodismo, não lhe dar valor), ..."
+            
+            >Recuse</a>
           </div>
           <div>
-            <a href="#" class="btn btn-info">Reutilize</a>
-            <a href="#" class="btn btn-dark">Recicle</a>
+            <a href="#" class="btn btn-info"
+            data-toggle="tooltip" data-placement="top" title="As experiências vividas, amor, paz, ..."
+            > 
+              Reutilize
+            </a>
+            <a href="#" class="btn btn-dark"
+            data-toggle="tooltip" data-placement="top" title="Os pensamentos, transforme-se, renasça, ..."
+            >
+              Recicle
+            </a>
           </div>
         </div>
       </div>
@@ -129,9 +142,9 @@
               </h4>
               <p>
                 {{event.details}}
-                <a href="{% url 'event' event.pk %}" class="btn btn-success">Inscreva-se</a>
-                
               </p>
+              <a href="{% url 'event' event.pk %}" class="btn btn-success">Inscreva-se</a>
+                
             </div>
           </div>
         </div>
@@ -154,7 +167,9 @@
       <div class="row">
         {% for photo in photos %}
         <div class="col-4 mt-3">
-          <img class="w-100 rounded" height="400px" src="{{photo.image.url}}" />
+          <div class="container-img-gallery img-thumbnail">
+            <img class="w-100 rounded" src="{{photo.image.url}}" />
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -202,7 +217,13 @@
     </div>
   </div>
   <div id="rodape">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores mollitia eaque culpa, fuga modi, excepturi tenetur optio exercitationem eligendi enim molestias porro hic, obcaecati cumque. Nobis perspiciatis eligendi dignissimos id.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
