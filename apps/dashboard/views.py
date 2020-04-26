@@ -68,7 +68,7 @@ def do_login(request):
         return HttpResponse("<h1>Você não tem autorização para acessar essa página</h1>")
       else:
         login(request, user)
-        return redirect('index')
+        return redirect('home')
     else:
       error = True
       return render(request, 'dashboard/telaLogin.html', {'error': error})
