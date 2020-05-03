@@ -1,149 +1,124 @@
 /* Header */
-div#header{
-  background-color: #4b68e7;
-}
-
-div#header .header-menu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 100px;
-  position: relative;
-  top: 50px;
-}
-
-div#header .header-menu > div{
-  color: #FFF;
-}
-
-div#header .header-menu .brand-menu h2{
-  font-size: 3em;
-  color: #1a23c9;
+nav.navbar .nav-link, .navbar-brand{
+  padding: 0 30px !important;
+  margin: 0 5px;
+  color: #000 !important;
   font-family: 'Caveat Brush', cursive;
-  font-weight: bold;
-}
-
-div#header .header-menu .cell-phone h5{
-  text-align: right;
-  font-family: 'Caveat Brush', cursive;
-  font-size: 1.8em;
-  font-weight: 500;
-}
-
-div#header .header-menu .cell-phone h3{
-  text-align: right;
-  font-family: 'Caveat Brush', cursive;
-  font-size: 2em;
-  font-weight: 500;
-}
-
-/* Editando menu */
-nav.bg-menu{
-  background: transparent !important;
-  position: relative;
-  top: 50px;
-}
-
-nav.bg-menu .nav-item{
-  background: #FFF;
-  margin: 0 10px;
-  padding: 17px 55px;
-  border-radius: 15px;
-  transition: .2s ease-in-out;
-}
-
-nav.bg-menu .nav-item:hover{
-  transform: rotate(-7deg);
-}
-
-nav.bg-menu .nav-item .nav-link{
-  color: #FFF;
-  font-size: 1.6em;
-  font-family: 'Spicy Rice', cursive;
-  font-weight: 100;
-
-}
-
-nav.bg-menu .nav-item .nav-link:hover{
-  color: #FFF;
-}
-
-nav.bg-menu .home {
-  background: #ffc200;
-  transform: rotate(-7deg) !important;
-}
-
-nav.bg-menu .home .nav-link{
-  transform: rotate(7deg);
-
-}
-
-nav.bg-menu .school{
-  background: #0ec7a7;
-}
-
-nav.bg-menu .gallery{
-  background: #f73961;
-}
-
-nav.bg-menu .contact{
-  background: #ac26c3;
+  font-size: 1.3em;
 }
 
 /* Editando cover */
-div.cover{
-  background: url('../img/logo-connecart2.png');
-  background-position: center;
-  background-repeat: no-repeat;
+div#cover div.wallpaper{
+  background: url('../img/kids.jpg') no-repeat center;
   background-size: cover;
+  height: 330px;
+  display: flex;
+  align-items: flex-end;
 }
 
-div.divide-to-sobre{
-  background: rgba(0, 0, 0, 0.2);
+div#cover .wallpaper__svg{
+  background: transparent;
+  width: 100%;
 }
 
-div.divide-to-sobre .svg-edit{
+div#cover .wallpaper__svg--path{
   fill: #FFF;
 }
 
-div.cover div.bg-cover{
-  background: rgba(0, 0, 0, 0.9);
-  height: 100%;
+div#cover .logotipo{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 240px 250px;
 }
 
-div.cover div.bg-cover h3{
-  font-size: 3em;
-  color: #FFF;
-  text-align: center;
-  text-shadow: 0 0 50px #000;
-}
-
-div.cover div.bg-cover h3 span{
-  color: #5DADE2;
-}
-
-div.cover div.bg-cover .btn-container-5{
-  display: flex;
-  justify-content: center;
-}
-
-div.cover div.bg-cover .btn-container-5 a{
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1.7em;
+div#cover .logotipo--brand{
+  color: #154360;
   font-weight: bold;
-  text-transform: capitalize;
+  font-size: 4.6em;
+  margin: 0;
 }
 
-div.cover div.bg-cover .btn-container-5 div{
+div#cover .logotipo--subtitle{
+  color: #797D7F;
+  font-size: 1.3em;
+  font-family: 'Caveat Brush', cursive;
+}
+
+div#cover .info{
+  padding: 20px 0;
+}
+
+div#cover .info .info__titles--subtitle{
+  color: #797D7F;
+  font-size: 1.8em;
+  text-align: center;
+  font-family: 'Caveat Brush', cursive;
+}
+
+
+div#cover .info .info__buttons{
   display: flex;
-  flex-direction: column;
   justify-content: center;
+}
+
+div#cover .info .info__buttons--btn button{
+  border-radius: 10px;
+  color: #000;
+  font-weight: normal;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 1.3em;
+  width: 120px;
+}
+
+div#cover .info .info__buttons--btn i{
+  position: relative;
+  top: 30px;
+  right: 16px;
+  transform: rotate(35deg);
+  font-size: 2em;
+}
+
+div#cover .info .info__buttons--btn .btn-reduza{
+  background-color: #D328AC;
+}
+
+div#cover .info .info__buttons--recicle {
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+div#cover .info .info__buttons--btn .btn-recicle{
+  background-color: #AC65CD;
+}
+
+div#cover .info .info__buttons--repense{
+  position: relative;
+  left: -10px;
+  margin-top: 60px;
+}
+
+div#cover .info .info__buttons--btn .btn-repense{
+  background-color: #2980B9;
+}
+
+div#cover .info .info__buttons--reutilize{
+  position: relative;
+  left: -50px;
+}
+
+div#cover .info .info__buttons--btn .btn-reutilize{
+  background-color: #52BE80;
+}
+
+div#cover .info .info__buttons--recuse{
+  position: relative;
+  margin-top: 40px;
+}
+
+div#cover .info .info__buttons--btn .btn-recuse{
+  
+  background: #D4AC0D;
+
 }
 
 /* SOBRE */
@@ -154,6 +129,17 @@ div#sobre{
   background-position: right;
   background-repeat: no-repeat;
   background-size: 50% 100%;
+}
+
+div#sobre .sobre__svg{
+  transform: rotate(180deg);
+  background: linear-gradient(90deg, #FFF 64%, rgba(44,182,213,0) 83%, rgba(255,255,255,1) 100%);
+  background-position: -55em;
+  background-size: cover;
+}
+
+div#sobre .sobre__svg--path{
+  fill: #FFF;
 }
 
 div#sobre div.bg-sobre{

@@ -71,20 +71,20 @@ TEMPLATES = [
 ]
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'espacoconectar',
-        'USER': 'espacoconectar',
-        'PASSWORD': 'techay1234', # no host
-	#'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
-        'HOST': 'mysql.espacoconectar-te.com.br',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'espacoconectar',
+#         'USER': 'espacoconectar',
+#         'PASSWORD': 'techay1234', # no host
+# 	#'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
+#         'HOST': 'mysql.espacoconectar-te.com.br',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'sql_mode': 'traditional',
+#         }
+#     }
+# }
 
 
 WSGI_APPLICATION = 'conectart.wsgi.application'
@@ -93,12 +93,12 @@ WSGI_APPLICATION = 'conectart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
 
 # Password validation
