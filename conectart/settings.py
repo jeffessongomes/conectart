@@ -74,12 +74,12 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'espacoconectar',
-        'USER': 'espacoconectar',
-        'PASSWORD': 'techay1234', # no host
+        'NAME': 'conectart_data',
+        'USER': 'root',
+        'PASSWORD': 'r#LKTR=TetL%32vb', # no host
 	#'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
-        'HOST': 'mysql.espacoconectar-te.com.br',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '',
         'OPTIONS': {
             'sql_mode': 'traditional',
         }
@@ -138,10 +138,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-] 
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+#]
 
 
 MEDIA_ROOT = (
