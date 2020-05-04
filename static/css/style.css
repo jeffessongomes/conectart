@@ -9,14 +9,17 @@ nav.navbar .nav-link, .navbar-brand{
 
 /* Editando cover */
 div#cover div.wallpaper{
-  background: url('../img/kids.jpg') no-repeat center;
+  background: url('../img/header-mulher.png') no-repeat center;
   background-size: cover;
-  height: 330px;
+  height: 350px;
   display: flex;
   align-items: flex-end;
+  padding: 0;
 }
 
 div#cover .wallpaper__svg{
+  position: relative;
+  top: 2px;
   background: transparent;
   width: 100%;
 }
@@ -258,7 +261,7 @@ div#contact{
 
 .bg-contact{
   position: relative;
-  top: 120px;
+  top: 0px;
   position: relative;
   background: #FFF;
   padding: 25px 0;
@@ -306,14 +309,22 @@ div#contact .btn-cto{
 }
 
 div#rodape{
+  display: flex;
+  align-items: flex-start;
   z-index: 30;
-  background: #2C3E50;
-  padding: 170px 0 50px 0;  
+  background-image: url('../img/header-mulher.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }
 
-div#rodape p{
-  text-align: center;
-  color: #FFF;
+
+div#rodape .rodape__svg{
+  transform: rotate(180deg);
+}
+div#rodape .rodape__svg--path{
+  fill: #FFF;
 }
 
 /* Event container */
