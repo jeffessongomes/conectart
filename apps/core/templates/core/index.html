@@ -27,20 +27,20 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Oficinas<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#"><i class="far fa-calendar-alt"></i> Oficinas<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Galeria</a>
+          <a class="nav-link" href="#"><i class="far fa-images"></i> Galeria</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Vendas</a>
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Vendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contatos</a>
+          <a class="nav-link" href="#"><i class="far fa-id-card"></i> Contatos</a>
         </li>
       </ul>
     </div>
@@ -137,32 +137,34 @@
       </div>
     </div>
   </div>
-  
-  
-  <div id="eventos">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="title-container">Nossos Eventos</h2>
-        </div>
 
-        {% for event in events %}
-        <div class="col-6">
-          <div class="info-events">
-            <div class="text-events">
-              <h4>
-                {{event.name}}
-              </h4>
-              <p>
-                {{event.details}}
-              </p>
-              <a href="{% url 'event' event.pk %}" class="btn btn-success">Inscreva-se</a>
-                
+
+  <div id="eventos">
+    <div class="eventos__bg">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="title-container"><i class="far fa-calendar-alt"></i> Nossos Eventos</h2>
+          </div>
+          {% for event in events %}
+          <div class="col-6">
+            <div class="info-events">
+              <a href="{% url 'event' event.pk %}">
+                <div class="text-events">
+                  <h4>
+                    {{event.name}}
+                  </h4>
+                  <div class="info-events__texts">
+                    <p class="info-events__texts--details">
+                      {{event.details}}
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-        
       </div>
     </div>
   </div>
@@ -254,4 +256,4 @@
     </script>
 </body>
 
-</html>	
+</html>
