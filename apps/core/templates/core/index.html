@@ -59,7 +59,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <div class="logotipo">
             <h1 class="logotipo--brand">
               <span class="text-info">Espaço</span>
@@ -72,14 +72,14 @@
             </p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <div class="info">
             <div class="info__titles">
               <p class="info__titles--subtitle">Vamos colocar em prática os 5R'S na nossa vida?</p>
               <p class="info__titles--subtitle text-info">Então vamos começar:</p>
             </div>
             <div class="info__buttons">
-              <div>
+              <div class="info__button--mobile">
                 <div class="info__buttons--btn">
                   <button class="btn btn-reduza" data-toggle="tooltip" data-placement="top" title="O trabalho, o estresse, a ansiedade, as preocupações, os pensamentos, a pressa, a dominância, o medo, ...">Reduza</button>
                   <i class="fas fa-long-arrow-alt-left"></i>
@@ -93,7 +93,7 @@
                 <button class="btn btn-repense" data-toggle="tooltip" data-placement="top" title="O que realmente importa, suas escolhas, valores, ...">Repense</button>
                 <i class="fas fa-long-arrow-alt-left"></i>
               </div>
-              <div>
+              <div class="info__button--mobile">
                 <div class="info__buttons--btn info__buttons--reutilize">
                   <button class="btn btn-reutilize" data-toggle="tooltip" data-placement="top" title="As experiências vividas, amor, paz, ...">Reutilize</button>
                   <i class="fas fa-long-arrow-alt-left"></i>
@@ -133,6 +133,9 @@
               </p>
             </div>
           </div>
+          <div class="sobre__coverMobile">
+            <img class="sobre__coverMobile--img img-thumbnail" src="{% static 'img/cover-2.jpeg' %}" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -144,10 +147,10 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <h2 class="title-container"><i class="far fa-calendar-alt"></i> Nossos Eventos</h2>
+            <h2 class="title-container"><i class="far fa-calendar-alt"></i> <span>Nossos Eventos</span></h2>
           </div>
           {% for event in events %}
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="info-events">
               <a href="{% url 'event' event.pk %}">
                 <div class="text-events">
@@ -181,7 +184,7 @@
       </div>
       <div class="row">
         {% for photo in photos %}
-        <div class="col-4 mt-3">
+        <div class="col-12 col-lg-4 mt-3">
           <div class="container-img-gallery img-thumbnail">
             <img class="w-100 rounded" src="{{photo.image.url}}" />
           </div>
@@ -211,10 +214,10 @@
               </div>
             </div>
             <div class="row">
-              <div class="col mt-3">
+              <div class="col-12 col-lg-6 mt-3">
                 <input type="text" class="form-control" name="email" placeholder="E-mail">
               </div>
-              <div class="col mt-3">
+              <div class="col-12 col-lg-6 mt-3">
                 <input type="text" class="form-control" name="whatsapp" placeholder="WhatsApp">
               </div>
             </div>

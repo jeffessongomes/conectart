@@ -134,6 +134,10 @@ div#sobre{
   background-size: 50% 100%;
 }
 
+div#sobre .sobre__coverMobile{
+  display: none;
+}
+
 div#sobre .sobre__svg{
   transform: rotate(180deg);
   background: linear-gradient(90deg, #FFF 64%, rgba(44,182,213,0) 83%, rgba(255,255,255,1) 100%);
@@ -300,7 +304,6 @@ div#contact{
   top: 0px;
   position: relative;
   background: #FFF;
-  padding: 25px 0;
   z-index: 31;
 }
 
@@ -343,6 +346,8 @@ div#contact .btn-cto{
   width: 17%;
   padding: 13px 0;
 }
+
+/* Rodape */
 
 div#rodape{
   display: flex;
