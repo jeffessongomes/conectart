@@ -1,10 +1,89 @@
 @media screen and (max-width: 1000px) {
-  /* Menu */
-  nav.bg-menu .home {
-    background: #ffc200;
-    transform: rotate(0deg) !important;
+
+  /* Geral */
+  .title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4.2em;
+    text-align: center;
   }
-  nav.bg-menu .home .nav-link{
-    transform: rotate(0deg);
+
+
+  /* Altereando a capa inicial */
+
+
+  div#cover .logotipo--brand{
+    font-size: 3.3em;
+  }
+
+  div#cover .logotipo--subtitle{
+    font-size: 1.1em;
+  }
+
+  div#cover .info{
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+  }
+
+  div#cover .info .info__buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  div#cover .info__buttons .info__button--mobile{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  div#cover .info .info__buttons--btn i{
+    position: relative;
+    top: 30px;
+    right: 16px;
+    transform: rotate(35deg);
+    font-size: 2em;
+  }
+  
+  div#cover .info .info__buttons--recicle {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  div#cover .info .info__buttons--repense{
+    left: 0px;
+    margin-top: 0px;
+  }
+  
+  div#cover .info .info__buttons--reutilize{
+    position: relative;
+    left: 0px;
+  }
+  
+  div#cover .info .info__buttons--recuse{
+    margin-top: 0;
+  }
+  
+  /* Alterando sobre */
+  div#sobre{
+    background: none;
+  }
+
+  div#sobre  .sobre__coverMobile{
+    display: flex;
+    justify-content: center;
+  }
+
+  div#sobre .sobre__coverMobile--img{
+    width: 90%;
+  }
+
+  div#sobre div.info-sobre h2{
+    padding: 0;
+    font-size: 4.2em;
+  }
+
+  div#sobre div.info-sobre p{
+    padding: 0;
   }
 }

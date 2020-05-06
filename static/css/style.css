@@ -7,6 +7,77 @@ nav.navbar .nav-link, .navbar-brand{
   font-size: 1.3em;
 }
 
+/* Editando cover do evento individual */
+div#cover div.wallpaperEvent{
+  background: url('../img/header-mulher.png') no-repeat center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+div#cover .wallpaperEvent__svg{
+  position: relative;
+  top: -1px;
+  background: transparen;
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+
+div#cover .wallpaperEvent__svg--end{
+  top: 1px;
+  transform: rotate(0deg);
+}
+
+div#cover .wallpaperEvent__svg--path{
+  fill:  #FFF;
+}
+
+div#cover .wallpaperEvent__svg--end--path{
+  fill: #cacfd2;
+}
+
+div#cover .event__menuButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+div#cover .event__menuButtons .event__menuButtons--btn a{
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: normal;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 1.3em;
+  width: 120px;
+}
+
+
+div#cover .event__menuButtons .event__menuButtons--oficinas{
+  background-color:  #2980b9;
+  position: relative;
+  top: -50px;
+}
+
+div#cover .event__menuButtons .event__menuButtons--galeria{
+  background-color:  #1abc9c;
+}
+
+div#cover .event__menuButtons .event__menuButtons--vendas{
+  background-color: #f1c40f;
+  position: relative;
+  top: 50px;
+}
+div#cover .event__menuButtons .event__menuButtons--contatos{
+  background-color: #e67e22;
+  position: relative;
+  top: 100px;
+}
+
 /* Editando cover */
 div#cover div.wallpaper{
   background: url('../img/header-mulher.png') no-repeat center;
@@ -32,6 +103,10 @@ div#cover .logotipo{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+div#cover .logotipo__event{
+  padding: 30px 0;
 }
 
 div#cover .logotipo--brand{
@@ -134,11 +209,20 @@ div#sobre{
   background-size: 50% 100%;
 }
 
+div#sobre .sobre__coverMobile{
+  display: none;
+}
+
 div#sobre .sobre__svg{
   transform: rotate(180deg);
   background: linear-gradient(90deg, #FFF 64%, rgba(44,182,213,0) 83%, rgba(255,255,255,1) 100%);
   background-position: -55em;
   background-size: cover;
+}
+
+div#sobre .sobre_svgEnd{
+  transform: rotate(0deg);
+  background: linear-gradient(90deg, #FFF 64%, rgba(44,182,213,0) 83%, rgba(255,255,255,1) 100%);
 }
 
 div#sobre .sobre__svg--path{
@@ -170,6 +254,11 @@ div#eventos{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin-top: 50px;
+}
+
+div#eventos .eventos__bg{
+  background: rgba(0, 0, 0, 0.5);
   padding: 30px 30px 80px 30px;
 }
 
@@ -183,9 +272,27 @@ div#eventos{
 
 div#eventos .info-events{
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #FFF;
   margin-top: 30px;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: .3s ease-in-out;
+}
+
+div#eventos .info-events:hover{
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+div#eventos .info-events a{
+  width: 100%;
+  height: 100%;
+}
+
+div#eventos .info-events a:hover{
+  text-decoration: none;
 }
 
 div#eventos .symbol-events{
@@ -202,21 +309,35 @@ div#eventos .symbol-events{
 }
 
 div#eventos .text-events{
-  padding: 12px 20px;
   text-align: center;
   color: #000;
   border-radius: 5px;
-  box-shadow: 0 10px 30px #000;
   background-color: rgba(255, 255, 255, 1);
+  transition: .3s ease-in-out;
+  height: 100%;
 }
 
 div#eventos .text-events h4{
-  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
   font-size: 2em;
+  background-color: #d7dbdd;
+  font-family: 'Caveat Brush', cursive;
+  border-radius: 5px 5px 0 0;
 }
-div#eventos .text-events p{
+
+div#eventos .text-events .info-events__texts{
+  padding: 5px 15px 15px 15px;
+}
+
+
+div#eventos .text-events .info-events__texts--details{
   text-align: justify;
   text-indent: 30px;
+  margin: 0;
+  white-space: normal;
+  max-height: 13ch;
+  overflow: hidden;
 }
 
 
@@ -256,7 +377,16 @@ div#gallery .container-img-gallery img{
 /* contato */
 
 div#contact{
-  padding: 25px 0px;
+  padding: 0;
+}
+
+div#contact .contactSvg{
+  position: relative;
+  top: -3px;
+}
+
+div#contact .contactSvg__svg--path{
+  fill:  #cacfd2;
 }
 
 .bg-contact{
@@ -264,8 +394,11 @@ div#contact{
   top: 0px;
   position: relative;
   background: #FFF;
-  padding: 25px 0;
   z-index: 31;
+}
+
+div.contact-info{
+  padding: 30px 0;
 }
 
 div.contact-info h5{
@@ -308,28 +441,40 @@ div#contact .btn-cto{
   padding: 13px 0;
 }
 
+/* Rodape */
+
 div#rodape{
-  display: flex;
-  align-items: flex-start;
-  z-index: 30;
   background-image: url('../img/header-mulher.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 20  0px;
 }
 
 
 div#rodape .rodape__svg{
+  position: relative;
+  top: -1px;
   transform: rotate(180deg);
 }
+
 div#rodape .rodape__svg--path{
-  fill: #FFF;
+  fill:  #FFF;
 }
 
 /* Event container */
 div#container-event{
-  margin: 140px 0;
+  position: relative;
+  top: -2px;
+  padding: 140px 0;
+  background-color:  #cacfd2;
+}
+
+div#container-event .event__container{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: #FFF;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 div#container-event h3{
