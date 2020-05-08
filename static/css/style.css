@@ -444,7 +444,7 @@ div#contact .btn-cto{
 /* Rodape */
 
 div#rodape{
-  background-image: url('../img/header-mulher.png');
+  background: #2471a3;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -460,6 +460,18 @@ div#rodape .rodape__svg{
 
 div#rodape .rodape__svg--path{
   fill:  #FFF;
+}
+
+div#rodape .rodape__info{
+  text-align: center;
+  padding: 30px 0;
+}
+
+div#rodape .rodape__info p{
+  font-weight: bold;
+  color: #FFF;
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* Event container */
