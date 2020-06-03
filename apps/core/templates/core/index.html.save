@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ConectAR-TE</title>
+  <script src="https://kit.fontawesome.com/e177f68271.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style-mobile.css' %}" />
+  <style>
+    /* Fonte MENU */
+    @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+    /* Fonte Header */
+    @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+    /* Fonte Cover */
+    @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+  </style>
+</head>
+
+<body>
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre">Sobre<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#galeria">Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#eventos">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contatos">Contatos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- FIM DO MENU -->
+  <!-- Cover -->
+  <div id="cover">
+    <div class="wallpaper">
+      <div class="wallpaper__svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="wallpaper__svg--path" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+            c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+            c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="logotipo">
+            <h1 class="logotipo--brand">
+              <span class="text-info">Espaço</span>
+              <br/>
+              Conect<span class="text-danger">A</span><span class="text-info">R</span>-<span class="text-warning">T</span>E
+            </h1>
+            <p class="logotipo--subtitle">
+              Conectando-se com a Vida através da Arte e do uso dos
+              5R'S
+            </p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="info">
+            <div class="info__titles">
+              <p class="info__titles--subtitle">Vamos colocar em prática os 5R'S na nossa vida?</p>
+              <p class="info__titles--subtitle text-info">Então vamos começar:</p>
+            </div>
+            <div class="info__buttons">
+              <div>
+                <div class="info__buttons--btn">
+                  <button class="btn btn-reduza" data-toggle="tooltip" data-placement="top" title="O trabalho, o estresse, a ansiedade, as preocupações, os pensamentos, a pressa, a dominância, o medo, ...">Reduza</button>
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="info__buttons--btn info__buttons--recicle">
+                  <button class="btn btn-recicle" data-toggle="tooltip" data-placement="top" title="Os pensamentos, transforme-se, renasça, ...">Recicle</button>
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+              </div>
+              <div class="info__buttons--btn info__buttons--repense">
+                <button class="btn btn-repense" data-toggle="tooltip" data-placement="top" title="O que realmente importa, suas escolhas, valores, ...">Repense</button>
+                <i class="fas fa-long-arrow-alt-left"></i>
+              </div>
+              <div>
+                <div class="info__buttons--btn info__buttons--reutilize">
+                  <button class="btn btn-reutilize" data-toggle="tooltip" data-placement="top" title="As experiências vividas, amor, paz, ...">Reutilize</button>
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="info__buttons--btn info__buttons--recuse">
+                  <button class="btn btn-recuse" data-toggle="tooltip" data-placement="top" title="O que não lhe faz bem (preguiça, comodismo, não lhe dar valor), ...">Recuse</button>
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim do Cover -->
+  <!-- Sobre -->
+  <div id="sobre">
+    <div class="sobre__svg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="sobre__svg--path" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+          c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+          c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+      </svg>
+    </div>
+
+    <a name="sobre"></a>
+    <div class="bg-sobre">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="info-sobre">
+		
+              <h2>
+                <span class="text-primary">Sobre</span> <span class="text-warning">o</span><br>
+                <span class="text-danger">nosso</span> <span class="text-info">projeto </span>
+              </h2>
+              <p>
+                {{our.details}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <a name="eventos"></a>
+  <div id="eventos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="title-container">Nossos Eventos</h2>
+        </div>
+
+        {% for event in events %}
+        <div class="col-6">
+          <div class="info-events">
+            <div class="text-events">
+              <h4>
+                {{event.name}}
+              </h4>
+              <p>
+                {{event.details}}
+              </p>
+              <a href="{% url 'event' event.pk %}" class="btn btn-success">Inscreva-se</a>
+                
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div
+  <a name="galeria"></a>
+  <div id="gallery" class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="gallery-info">
+            <h2 class="title-container">Nossas fotos</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for photo in photos %}
+        <div class="col-4 mt-3">
+          <div class="container-img-gallery img-thumbnail">
+            <img class="w-100 rounded" src="{{photo.image.url}}" />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <a name="contato"></a>
+  <div id="contact">
+    <div class="container bg-contact">
+      <div class="row">
+        <div class="col-12">
+          <div class="contact-info">
+            <h5>Envia aquela mensagem! :)</h5>
+            <h2>Contato</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form method="post" action="{% url 'comments' %}">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="title" placeholder="Seu título">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mt-3">
+                <input type="text" class="form-control" name="email" placeholder="E-mail">
+              </div>
+              <div class="col mt-3">
+                <input type="text" class="form-control" name="whatsapp" placeholder="WhatsApp">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mt-3">
+                <textarea class="form-control" name="details" placeholder="Messagem" rows="6"></textarea>
+              </div>
+            </div>
+            <div class="container-btn-cto mt-3">
+              <button class="btn btn-primary" type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rodape">
+    <div class="rodape__svg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="rodape__svg--path" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+          c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+          c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+      </svg>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+</body>
+
+</html>	
