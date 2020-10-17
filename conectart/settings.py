@@ -25,7 +25,7 @@ SECRET_KEY = '4xc^2gg*f^5=$_4%4)mqk8f_ln*7q1!q-vc0&rq+dvs#u*37*t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.espacoconectar-te.com.br', 'espacoconectar-te.com.br', '104.131.37.227', 'localhost']
 
 
 # Application definition
@@ -91,8 +91,8 @@ TEMPLATES = [
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'tecblog',
-         'USER': 'tecblog',
+         'NAME': 'conectart',
+         'USER': 'main',
          'PASSWORD': 'root1234',
          'HOST': 'localhost',
          'PORT': '',
