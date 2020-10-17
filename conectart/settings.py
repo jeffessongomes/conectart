@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4xc^2gg*f^5=$_4%4)mqk8f_ln*7q1!q-vc0&rq+dvs#u*37*t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.espacoconectar-te.com.br', 'espacoconectar-te.com.br', '104.131.37.227', 'localhost']
 
