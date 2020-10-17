@@ -72,20 +72,33 @@ TEMPLATES = [
 
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'conectart_data',
+#         'USER': 'root',
+#         'PASSWORD': 'r#LKTR=TetL%32vb', # no host
+# 	#'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '',
+#         'OPTIONS': {
+#             'sql_mode': 'traditional',
+#         }
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'conectart_data',
-        'USER': 'root',
-        'PASSWORD': 'r#LKTR=TetL%32vb', # no host
-	#'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'tecblog',
+         'USER': 'tecblog',
+         'PASSWORD': 'root1234',
+         'HOST': 'localhost',
+         'PORT': '',
+     }
 }
+
 
 WSGI_APPLICATION = 'conectart.wsgi.application'
 
