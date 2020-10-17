@@ -88,16 +88,16 @@ TEMPLATES = [
 # }
 
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'conectart',
-         'USER': 'main',
-         'PASSWORD': 'root1234',
-         'HOST': 'localhost',
-         'PORT': '',
-     }
-}
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'conectart',
+#          'USER': 'main',
+#          'PASSWORD': 'root1234',
+#          'HOST': 'localhost',
+#          'PORT': '',
+#      }
+# }
 
 
 WSGI_APPLICATION = 'conectart.wsgi.application'
@@ -106,12 +106,12 @@ WSGI_APPLICATION = 'conectart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#   'default': {
-#       'ENGINE': 'django.db.backends.sqlite3',
-#      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#   }
-#}
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  }
+}
 
 
 # Password validation

@@ -46,7 +46,7 @@ def verifify_user(email, password):
     user = None
     
   if user is not None:
-    if user.is_staff == True:
+    if user.is_superuser == True:
       user = authenticate(username=user.username, password=password)
       return user
     else:

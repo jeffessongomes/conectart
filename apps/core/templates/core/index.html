@@ -130,7 +130,7 @@
                 <span class="text-danger">nosso</span> <span class="text-info">projeto </span>
               </h2>
               <p>
-                {{our.details}}
+                {{our.details | safe | linebreaks}}
               </p>
             </div>
           </div>
@@ -162,11 +162,11 @@
               <a href="{% url 'event' event.pk %}">
                 <div class="text-events">
                   <h4>
-                    {{event.name}}
+                    {{event.name | safe | linebreaks}}
                   </h4>
                   <div class="info-events__texts">
                     <p class="info-events__texts--details">
-                      {{event.details}}
+                      {{event.details | safe | linebreaks}}
                     </p>
                   </div>
                 </div>
